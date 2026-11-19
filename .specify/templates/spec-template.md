@@ -5,6 +5,10 @@
 **Status**: Draft  
 **Input**: User description: "$ARGUMENTS"
 
+> **Scope discipline (constitution Principle VI)**: This specification captures
+> WHAT and WHY only. It MUST NOT name languages, frameworks, libraries,
+> datastores, or other technology choices. Those belong in `plan.md`.
+
 ## User Scenarios & Testing *(mandatory)*
 
 <!--

@@ -30,8 +30,21 @@
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
+*Source: `.specify/memory/constitution.md`. Every violation MUST be recorded
+in Complexity Tracking below with a written justification.*
 
-[Gates determined based on constitution file]
+- [ ] **I. Tenant Isolation**: every tenant-scoped query and mutation includes
+      an `orgId` filter; no endpoint can access another organization's data.
+- [ ] **II. Error Envelope**: all responses use `{ code, message, details? }`.
+- [ ] **III. Test Coverage**: every endpoint has integration tests and every
+      acceptance criterion in `spec.md` maps to at least one test.
+- [ ] **IV. Audit Trail**: all task and project mutations emit audit entries.
+- [ ] **V. Async Work**: background jobs and webhook deliveries are idempotent
+      and retryable.
+- [ ] **VI. Spec Scope**: `spec.md` is technology-agnostic (WHAT/WHY only); all
+      technology choices are recorded in this document.
+- [ ] **Technology Constraints**: TypeScript strict mode, Fastify, Prisma,
+      PostgreSQL, and Redis + BullMQ are declared in the Technical Context.
 
 ## Project Structure
 
